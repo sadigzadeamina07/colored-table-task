@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+table{border-collapse:collapse; margin: 0 0 30px 30px; 
+
+}
+.container{display: flex; flex-wrap: wrap; justify-content: center;}
+td{
+    width:30px; height:10px; border:4px solid black;
+    padding:20px;
+
+}
+.yasil{background:rgb(61, 152, 61);}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table id="cdv"></table>
+        <table id="cdv2"></table>
+        <table id="cdv3" ></table>
+        <table id="cdv4"></table>
+        <table id="cdv5"></table>
+        <table id="cdv6" ></table>
+        <table id="cdv7" ></table>
+    </div>
+
+    <script>
+const cdv=document.getElementById('cdv')
+const cdv2=document.getElementById('cdv2')
+const cdv3=document.getElementById('cdv3')
+const cdv4=document.getElementById('cdv4')
+const cdv5=document.getElementById('cdv5')
+const cdv6=document.getElementById('cdv6')
+const cdv7=document.getElementById('cdv7')
+let kod=''
+let kod2=' '
+let kod3=' '
+let kod4=' '
+let x
+let kod5=' '
+let kod6=' '
+let kod7=' '
+for(let i=1;i<=4;i++){
+    kod+='<tr>'
+    for(let j=1;j<=4;j++){
+
+ x=(i>=j) ? 'yasil' : ' '
+kod+=`<td class=${x}></td>`
+    }
+        kod+='</tr>'
+}
+cdv.innerHTML=kod
+//2nd table
+
+for(let i=1;i<=4;i++){
+    kod2+='<tr>'
+    for(let j=1;j<=4;j++){
+        x=j%2==1 ? 'yasil':' '
+kod2+=`<td class=${x}></td>`
+    }
+        kod2+='</tr>'
+}
+cdv2.innerHTML=kod2 
+// 3rd table
+for(let i=1;i<=4;i++){
+    kod3+='<tr>'
+    for(let j=1;j<=4;j++){
+        x=(j+i) % 2==0 ? 'yasil': ' '
+kod3+=`<td class=${x}></td>`
+    }
+        kod3+='</tr>'
+}
+cdv3.innerHTML=kod3
+// 4th table
+for(let i=0;i<=4;i++){
+    kod4+='<tr>'
+    for(let j=1;j<=5;j++){
+        kod4+= `<td>${i+j}</td>`
+    }
+    kod4+='</tr>'
+}
+cdv4.innerHTML=kod4
+// 5th table
+for(let i=1;i<=4;i++){
+    kod5+='<tr>'
+    for(let j=1;j<=4;j++){
+       x=i%2==0 ? 'yasil' : ' '
+        kod5+= `<td class=${x}></td>`
+    }
+    kod5+='</tr>'
+}
+cdv5.innerHTML=kod5
+// 6th table
+for(let i=1;i<=5;i++){
+    kod6+='<tr>'
+    for(let j=1;j<=5;j++){
+x++
+        kod6+= `<td>${x}</td>`
+    }
+    kod6+='</tr>'
+}
+cdv6.innerHTML=kod6
+// 7th table
+x=0
+for(let i=1;i<=5;i++){
+    kod7+='<tr>'
+    for(let j=1;j<=5;j++){
+x++
+        kod7+= `<td>${x%2==0 ? ' ': x }</td>`
+    }
+    kod7+='</tr>'
+}
+cdv7.innerHTML=kod7
+
+    </script>
+</body>
+</html>
