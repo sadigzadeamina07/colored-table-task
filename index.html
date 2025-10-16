@@ -95,11 +95,11 @@ for(let i=1;i<=4;i++){
 }
 cdv5.innerHTML=kod5
 // 6th table
-for(let i=1;i<=5;i++){
+for(let i=1;i<=4;i++){
     kod6+='<tr>'
-    for(let j=1;j<=5;j++){
-x++
-        kod6+= `<td>${x}</td>`
+    for(let j=1;j<=4;j++){
+x=(j>=i) ? 'yasil' :' '
+        kod6+= `<td class=${x}></td>`
     }
     kod6+='</tr>'
 }
