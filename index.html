@@ -27,6 +27,7 @@ td{
         <table id="cdv6" ></table>
         <table id="cdv7" ></table>
         <table id="cdv8" ></table>
+        <table id="cdv9" ></table>
     </div>
 
     <script>
@@ -37,7 +38,8 @@ const cdv4=document.getElementById('cdv4')
 const cdv5=document.getElementById('cdv5')
 const cdv6=document.getElementById('cdv6')
 const cdv7=document.getElementById('cdv7')
-const cdv8=document.getElementById('cdv7')
+const cdv8=document.getElementById('cdv8')
+const cdv9=document.getElementById('cdv9')
 let kod=''
 let kod2=' '
 let kod3=' '
@@ -47,6 +49,7 @@ let kod5=' '
 let kod6=' '
 let kod7=' '
 let kod8=' '
+let kod9=' '
 for(let i=1;i<=4;i++){
     kod+='<tr>'
     for(let j=1;j<=4;j++){
@@ -133,6 +136,16 @@ x=(j<=say) ?'yasil':' '
     kod8+='</tr>'
 }
 cdv8.innerHTML=kod8
+say=8
+for(let i=1;i<=8;i++){
+    kod9+='<tr>'
+    for(let j=1;j<=8;j++){
+x=(i<=j && j<=say-i+1 && i<=say/2 || i>=j && j>=say-i+1 && i>say/2) ?'yasil':' '
+        kod9+= `<td class=${x}> </td>`
+    }
+    kod9+='</tr>'
+}
+cdv9.innerHTML=kod9
     </script>
 </body>
 </html>
